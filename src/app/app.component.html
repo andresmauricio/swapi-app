@@ -1,5 +1,13 @@
 <router-outlet> </router-outlet>
 
-<div *ngFor="let categori of list">
-  <a [href]="categori.api" target="_blank">{{categori.name}}</a>
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; margin-top: 200px;">
+  <mat-card *ngFor="let categori of list" style="max-width: 250px;">
+    <mat-card-title>{{categori.name | uppercase}}</mat-card-title>
+    <mat-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus inventore autem explicabo iure nobis perspiciatis expedita? Sit excepturi veritatis corporis alias, reiciendis vero iste error unde ex sunt quae.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Ir</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
