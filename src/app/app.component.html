@@ -1,1 +1,5 @@
 <router-outlet> </router-outlet>
+
+<div *ngFor="let categori of list">
+  <a [href]="categori.api" target="_blank">{{categori.name}}</a>
+</div>
