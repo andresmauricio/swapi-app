@@ -1,1 +1,7 @@
-<p>list-of-people works!</p>
+<ng-container *ngIf="peoples">
+  <div style="display: flex; flex-wrap: wrap; width: 90%; margin: 0 auto; justify-content: center; gap: 10px;">
+    <mat-card *ngFor="let people of peoples.results" style="width: 200px;">
+      <mat-card-title>{{ people.name }}</mat-card-title>
+    </mat-card>
+  </div>
+</ng-container>

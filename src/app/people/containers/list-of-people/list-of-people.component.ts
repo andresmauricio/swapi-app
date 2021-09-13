@@ -9,7 +9,7 @@ import { ResponseApi } from '../../models/IPeople';
 })
 export class ListOfPeopleComponent implements OnInit {
   private categorie = Categorie;
-  people!: ResponseApi;
+  peoples!: ResponseApi;
 
   constructor(private swapiService: SwapiService) {}
 
@@ -18,7 +18,7 @@ export class ListOfPeopleComponent implements OnInit {
       .getInformationOfCategorie(Categorie.PEOPLE)
       .subscribe((response: ResponseApi) => {
         console.log(response);
-        this.people = response;
+        this.peoples = response;
       });
   }
 }
