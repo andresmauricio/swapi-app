@@ -14,6 +14,14 @@ export enum Categorie {
 
 @Injectable({ providedIn: 'root' })
 export class SwapiService {
+  public state: any = {
+    films: [],
+    people: [],
+    planets: [],
+    species: [],
+    starships: [],
+    vehicles: [],
+  };
   private readonly BASE_API: string;
 
   constructor(private http: HttpClient) {
@@ -30,5 +38,10 @@ export class SwapiService {
 
   getInformationOfPage(api: string): Observable<any> {
     return this.http.get(api);
+  }
+
+  setInformationInState(categorie: Categorie, api: string, information?: any) {
+    this.state[categorie].push({ api, information });
+    console.log(this.state);
   }
 }
