@@ -27,4 +27,8 @@ export class SwapiService {
   getInformationOfCategorie(categorie: Categorie): Observable<any> {
     return this.http.get(`${this.BASE_API}${categorie}`);
   }
+
+  getInformationOfPage(api: string): Observable<any> {
+    return this.http.get(api);
+  }
 }

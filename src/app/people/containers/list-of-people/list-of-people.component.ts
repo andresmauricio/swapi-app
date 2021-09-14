@@ -21,4 +21,24 @@ export class ListOfPeopleComponent implements OnInit {
         this.peoples = response;
       });
   }
+
+  changePage(value: string) {
+    if (value === 'PREV' && this.peoples.previous) {
+      this.getpageContent(this.peoples.previous);
+    }
+
+    if (value === 'NEXT' && this.peoples.next) {
+      const api = this.peoples.next;
+      this.getpageContent(this.peoples.next);
+    }
+  }
+
+  getpageContent(api: string) {
+    this.swapiService
+      .getInformationOfPage(api)
+      .subscribe((response: ResponseApi) => {
+        console.log(response);
+        this.peoples = response;
+      });
+  }
 }
