@@ -42,6 +42,5 @@ export class SwapiService {
 
   setInformationInState(categorie: Categorie, api: string, information?: any) {
     this.state[categorie].push({ api, information });
-    console.log(this.state);
   }
 }

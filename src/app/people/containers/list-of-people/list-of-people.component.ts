@@ -19,13 +19,6 @@ export class ListOfPeopleComponent implements OnInit {
       .subscribe((response: ResponseApi) => {
         console.log(response);
         this.peoples = response;
-        for (const people of response.results) {
-          this.swapiService.setInformationInState(
-            Categorie.PEOPLE,
-            people.url,
-            { data: people }
-          );
-        }
       });
   }
 
