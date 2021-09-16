@@ -2,6 +2,18 @@
   <div style="display: flex; flex-wrap: wrap; width: 90%; margin: 0 auto; justify-content: center; gap: 10px;">
     <mat-card *ngFor="let people of peoples.results" style="width: 200px;">
       <mat-card-title>{{ people.name }}</mat-card-title>
+      <mat-list role="list">
+        <mat-list-item role="listitem">birth year: {{people.birth_year}}</mat-list-item>
+        <mat-list-item role="listitem">eye color: {{people.eye_color}}</mat-list-item>
+        <mat-list-item role="listitem">films: {{people.films.length}}</mat-list-item>
+        <mat-list-item role="listitem">gender: {{people.gender}}</mat-list-item>
+        <mat-list-item role="listitem">hair color: {{people.hair_color}}</mat-list-item>
+        <mat-list-item role="listitem">mass: {{people.mass}}Kg</mat-list-item>
+        <mat-list-item role="listitem">skin color: {{people.skin_color}}</mat-list-item>
+        <mat-list-item role="listitem">species: {{people.species.length}}</mat-list-item>
+        <mat-list-item role="listitem">starships: {{people.starships.length}}</mat-list-item>
+        <mat-list-item role="listitem">vehicles: {{people.vehicles.length}}</mat-list-item>
+      </mat-list>
     </mat-card>
   </div>
 
